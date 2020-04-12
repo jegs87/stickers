@@ -27,9 +27,17 @@
       user-select: none;
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    @media (max-width: 768px) {
+      .responsive {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .responsive-cta {
+        text-align: center;
+      }
+      .responsive-img {
+        margin: 4rem auto;
+
       }
     }
   </style>
@@ -77,9 +85,9 @@
   <main role="main">
 
     <section class="jumbotron" style="background-image: url('bg.png');">
-      <div class="container d-flex">
+      <div class="container d-flex responsive">
         
-        <div class="my-auto">
+        <div class="my-auto responsive-cta">
           <h1>Stickers de tus mascotas en WhatsApp</h1>
           <p class="lead text-muted">Tú puedes ayudar a artistas e ilustradores con stickers de WhatsApp</p>
           <p>
@@ -87,7 +95,7 @@
           </p>
         </div>
 
-        <div  class="ml-auto">
+        <div  class="ml-auto responsive-img">
           <img src="sticker-mascotas.png" alt="" class="">
         </div>
 
