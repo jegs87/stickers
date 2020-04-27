@@ -109,7 +109,7 @@
           <h1>Stickers de tus mascotas en WhatsApp</h1>
           <p class="lead text-muted">Tú puedes ayudar a artistas e ilustradores con stickers de WhatsApp</p>
           <p>
-            <a href="https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas" target="_blank" class="btn btn-success my-2 py-3 px-5 text-white"><b>Solicita los tuyos por WhatsApp <i class="fab fa-whatsapp pl-1" style="font-size: 20px;"></i></b></a>
+            <a href="https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas" target="_blank" class="btn btn-success my-2 py-3 px-5 text-white whatsapp"><b>Solicita los tuyos por WhatsApp <i class="fab fa-whatsapp pl-1" style="font-size: 20px;"></i></b></a>
           </p>
         </div>
 
@@ -129,7 +129,7 @@
 
         <p>Una manera de poder contribuir con sus gastos es solicitando un pack original de 5 stickers digitales de WhatsApp de tu mascota con el arte de Chakz Armada y Didier Tzakum por $200.</p>
 
-        <p>Pide los tuyos mandando un WhatsApp al <a href="https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas" target="_blank">5559478013</a> junto con imágenes de tu mascota. Por este medio se te proporcionará la cuenta para realizar tu aportación.</p>
+        <p>Pide los tuyos mandando un WhatsApp al <a href="https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas" target="_blank" class="whatsapp">5559478013</a> junto con imágenes de tu mascota. Por este medio se te proporcionará la cuenta para realizar tu aportación.</p>
 
         <div class="text-center mt-5">
           <ul class="list-inline" style="font-size: 24px;">
@@ -148,5 +148,25 @@
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
-  </html>
+  <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+  <script>
+    function getUrlVars() {
+          var vars = {};
+          var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+              vars[key] = value;
+          });
+          return vars;
+      }
+
+      let ref = getUrlVars()['ref'];
+      let whatsappClass = document.getElementsByClassName('whatsapp');
+
+      if (ref) {
+        let whatsapp0 = whatsappClass[0].href = "https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas.%20Promo%20" + ref;
+        let whatsapp1 = whatsappClass[1].href = "https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas.%20Promo%20" + ref;
+      }
+
+  </script>
+
+</body></html>
