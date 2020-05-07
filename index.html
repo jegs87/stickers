@@ -124,6 +124,7 @@
 
           <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfydNqTuS02L9H8R4dTySklaKCP7_tHQgdGPaH-URppOpfJIw/formResponse" method="POST">
             <input type="hidden" id="entry.1656307194" name="entry.1656307194" value="">
+            <input type="hidden" id="entry.846440415" name="entry.846440415" value="">
             <div class="row">
               <div class="col-md-8">
 
@@ -186,6 +187,9 @@
       document.getElementById("entry.1656307194").value = seconds;
     }, 1000);
 
+    let platform = navigator.platform;
+    document.getElementById("entry.846440415").value = platform;
+
     /*
     function getUrlVars() {
           var vars = {};
@@ -218,6 +222,11 @@
 
         $(location).attr("href", "https://api.whatsapp.com/send?phone=5215559478013&text=Quiero%20stickers%20de%20mis%20mascotas");
       });
+
+
+
+      
+
 
   </script>
 
